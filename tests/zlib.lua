@@ -50,3 +50,7 @@ assert(uncompress(compressed_max, #data) == data, 'decompression failed!')
 local compressed_not = assert(compress(data, z.Z_NO_COMPRESSION))
 print('no compression: ', #compressed_not)
 assert(uncompress(compressed_not, #data) == data, 'decompression failed!')
+
+-- deliberately return a nonzero exit code
+-- to avoid console window being closed too quickly
+os.exit(1)
