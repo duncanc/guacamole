@@ -16,7 +16,11 @@ while true do
 		print(string.format('[%d] %s', i, test))
 	end
 	io.write('>')
-	local selection = tonumber(io.read('*l'))
+	local selection = io.read('*l')
+	if (selection == nil) then
+		os.exit(0)
+	end
+	selection = tonumber(selection)
 	selection = selection and tests[selection]
 	if selection then
 		test = selection
