@@ -1,0 +1,3 @@
+[submodule "bin-win32"]
+	path = bin-win32
+	url = git@github.com:duncanc/guacamole-bin-win32.git
