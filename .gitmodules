@@ -1,6 +1,6 @@
 [submodule "bin-win32"]
 	path = bin-win32
 	url = git@github.com:duncanc/guacamole-bin-win32.git
-[submodule "lua/extern/MicrosoftWindows"]
-	path = lua/extern/MicrosoftWindows
-	url = git@github.com:duncanc/guacamole-extern-MicrosoftWindows
+[submodule "lua/extern/microsoftwindows"]
+	path = lua/extern/microsoftwindows
+	url = git@github.com:duncanc/guacamole-extern-microsoftwindows
