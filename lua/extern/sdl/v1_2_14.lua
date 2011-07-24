@@ -799,7 +799,7 @@ ffi.cdef[[
 -- window manager
 
 if ffi.os == 'Windows' then
-	local win32 = require 'extern.win32'
+	require 'extern.microsoftwindows'
 	ffi.cdef [[
 	
 		typedef struct SDL_SysWMinfo {
