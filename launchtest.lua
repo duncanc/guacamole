@@ -28,4 +28,17 @@ while true do
 	end
 end
 
+do
+	local _require = require
+	local expectedModuleCase = {}
+	function require(module)
+		local expected = expectedModuleCase[string.lower(module)]
+		if expected and (expected ~= module) then
+			error('module case inconsistency: \'' .. module .. '\' vs. \'' .. expected .. '\'', 2)
+		end
+		expectedModuleCase[string.lower(module)] = module
+		return _require(module)
+	end
+end
+
 dofile(test)
