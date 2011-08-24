@@ -120,7 +120,8 @@ do
 			local funcName = 'gl' .. funcDef[1]
 			local func = getProcAddress(funcName)
 			if (func == nil) then
-				error('unable to load OpenGL function \'' .. funcName .. '\'')
+				print('unable to load OpenGL function \'' .. funcName .. '\'')
+        return nil
 			end
 			local sigBuf = {self:mangleTypeName(funcDef.ret or 'void') .. ' (*)('}
 			for i = 2, #funcDef, 2 do
