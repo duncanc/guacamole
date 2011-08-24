@@ -568,7 +568,7 @@ do
 							self._id[0] = 0
 						end
 					end;
-					__tostring = function(self)  return 'OpenGL' .. typeName .. ' ' .. self._id[0];  end;
+					__tostring = function(self)  return 'OpenGL ' .. typeName .. ': ' .. self._id[0];  end;
 				})
 				local byId = setmetatable({}, {__mode = 'v'})
 				box[typeName] = function(id)
@@ -945,8 +945,9 @@ do
 		
 		local getString = context[loader:mangleFunctionName("GetString")]
 		local VERSION = context[loader:mangleConstantName("VERSION")]
-		
+    
 		local v = getString(VERSION)
+		
 		local major, minor = v:match('^(%d+)%.(%d+)')
 		loader:loadPackage(require('extern.opengl.packages.VERSION_' .. major .. '_' .. minor))
 		
