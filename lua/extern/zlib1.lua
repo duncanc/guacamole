@@ -1,5 +1,4 @@
 
-local stdlib = require 'extern.stdlib'
 local ffi = require 'ffi'
 
 ffi.cdef [[
